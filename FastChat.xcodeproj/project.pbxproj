@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212625D52962FB870004D55D /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212625D32962FB870004D55D /* MessageCell.swift */; };
-		212625D62962FB870004D55D /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 212625D42962FB870004D55D /* MessageCell.xib */; };
 		21795802295DA83B00229C24 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21795801295DA83B00229C24 /* Constant.swift */; };
 		21795805295DB82700229C24 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21795804295DB82700229C24 /* Message.swift */; };
 		217AA0B1295C77A200526F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217AA0B0295C77A200526F4B /* AppDelegate.swift */; };
@@ -26,6 +24,8 @@
 		217AA0EC295C7FB800526F4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 217AA0EB295C7FB800526F4B /* GoogleService-Info.plist */; };
 		217AA0EF295C809D00526F4B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 217AA0EE295C809D00526F4B /* FirebaseAuth */; };
 		217AA0F1295C809D00526F4B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 217AA0F0295C809D00526F4B /* FirebaseFirestore */; };
+		21D5D19A29640B7200BFA7FE /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D5D19829640B7200BFA7FE /* MessageCell.swift */; };
+		21D5D19B29640B7200BFA7FE /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21D5D19929640B7200BFA7FE /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		212625D32962FB870004D55D /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		212625D42962FB870004D55D /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		21795801295DA83B00229C24 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		21795804295DB82700229C24 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		217AA0AD295C77A200526F4B /* FastChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +67,8 @@
 		217AA0E7295C7A8900526F4B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		217AA0E9295C7A9500526F4B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		217AA0EB295C7FB800526F4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21D5D19829640B7200BFA7FE /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		21D5D19929640B7200BFA7FE /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				217AA0B6295C77A200526F4B /* Main.storyboard */,
-				212625D32962FB870004D55D /* MessageCell.swift */,
-				212625D42962FB870004D55D /* MessageCell.xib */,
+				21D5D19829640B7200BFA7FE /* MessageCell.swift */,
+				21D5D19929640B7200BFA7FE /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				212625D62962FB870004D55D /* MessageCell.xib in Resources */,
+				21D5D19B29640B7200BFA7FE /* MessageCell.xib in Resources */,
 				217AA0C0295C77A300526F4B /* LaunchScreen.storyboard in Resources */,
 				217AA0EC295C7FB800526F4B /* GoogleService-Info.plist in Resources */,
 				217AA0BD295C77A300526F4B /* Assets.xcassets in Resources */,
@@ -323,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				217AA0E8295C7A8900526F4B /* LoginViewController.swift in Sources */,
-				212625D52962FB870004D55D /* MessageCell.swift in Sources */,
+				21D5D19A29640B7200BFA7FE /* MessageCell.swift in Sources */,
 				217AA0B5295C77A200526F4B /* WelcomeViewController.swift in Sources */,
 				217AA0E6295C7A7F00526F4B /* RegisterViewController.swift in Sources */,
 				21795805295DB82700229C24 /* Message.swift in Sources */,

@@ -2,13 +2,15 @@
 //  MessageCell.swift
 //  FastChat
 //
-//  Created by Kullanici on 2.01.2023.
+//  Created by Kullanici on 3.01.2023.
 //
 
 import UIKit
 
 class MessageCell: UITableViewCell {
     @IBOutlet weak var messageBubble: UIView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var rightImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

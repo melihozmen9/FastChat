@@ -10,62 +10,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="58" id="KGk-i7-Jjw" customClass="MessageCell" customModule="FastChat" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="312" height="58"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="47" id="KGk-i7-Jjw" customClass="MessageCell" customModule="FastChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="312" height="58"/>
+                <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vge-ZO-4rs">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXp-3j-aoG">
+                        <rect key="frame" x="0.0" y="0.0" width="310" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n62-sD-vtG">
-                                <rect key="frame" x="10" y="10" width="240" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r0-Qb-jbU">
-                                        <rect key="frame" x="8" y="12" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo16px.png" translatesAutoresizingMaskIntoConstraints="NO" id="IP9-hd-5UG">
-                                <rect key="frame" x="260" y="10" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="R8E-WW-vdU"/>
-                                    <constraint firstAttribute="width" constant="40" id="TV1-4z-2lf"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apc-qG-gEz">
+                                <rect key="frame" x="0.0" y="0.0" width="319" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.91645923780000005" blue="0.99105926899999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="n62-sD-vtG" firstAttribute="top" secondItem="Vge-ZO-4rs" secondAttribute="top" constant="10" id="bdb-qb-wyh"/>
-                            <constraint firstAttribute="bottom" secondItem="n62-sD-vtG" secondAttribute="bottom" constant="10" id="e2F-53-KCv"/>
-                            <constraint firstItem="n62-sD-vtG" firstAttribute="leading" secondItem="Vge-ZO-4rs" secondAttribute="leading" constant="10" id="he6-eG-O5E"/>
-                            <constraint firstItem="IP9-hd-5UG" firstAttribute="leading" secondItem="n62-sD-vtG" secondAttribute="trailing" constant="10" id="vyc-r7-aNI"/>
-                        </constraints>
-                    </stackView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="216-2167376_me-button-clip-art-at-clker-me-button" translatesAutoresizingMaskIntoConstraints="NO" id="Vph-UH-xyS">
+                        <rect key="frame" x="318" y="7" width="56" height="33"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="messageBubble" destination="n62-sD-vtG" id="NU8-Zr-tHC"/>
+                <outlet property="label" destination="apc-qG-gEz" id="7G3-e2-AUE"/>
+                <outlet property="messageBubble" destination="DXp-3j-aoG" id="e43-rE-2QP"/>
+                <outlet property="rightImageView" destination="Vph-UH-xyS" id="BXz-Jb-i3U"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="89.0625"/>
+            <point key="canvasLocation" x="21.739130434782609" y="85.379464285714278"/>
         </tableViewCell>
-        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ym5-Xl-78G">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="301" y="84"/>
-        </imageView>
     </objects>
     <resources>
-        <image name="logo16px.png" width="17.454545974731445" height="17.454545974731445"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="216-2167376_me-button-clip-art-at-clker-me-button" width="300" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
