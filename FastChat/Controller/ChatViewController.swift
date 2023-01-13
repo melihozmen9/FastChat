@@ -14,16 +14,13 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages :[Message] = [
-        Message(sender: "2@2.com", body: "Hey!"),
-        Message(sender: "1@2.com", body: "what's up?"),
-        Message(sender: "2@2.com", body: "Cool bro.")
-    ]
+    var messages :[Message] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
-
+loadMessages()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,7 +28,8 @@ class ChatViewController: UIViewController {
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField : messageSender,
-                K.FStore.bodyField : messageBody
+                K.FStore.bodyField : messageBody,
+                "date" : Date().timeIntervalSince1970
             ]) { (Error) in
                 if let e = Error {
                     print(e)
@@ -40,6 +38,7 @@ class ChatViewController: UIViewController {
                 }
             }
         }
+        messageTextField.text = ""
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
@@ -61,6 +60,28 @@ class ChatViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func loadMessages() {
+        db.collection("messages").order(by: "date").addSnapshotListener { querySnapshot, error in
+            self.messages = []
+            if let e = error {
+                print(e)
+            } else {
+                if let snapShotDocuments = querySnapshot?.documents {
+                    for doc in snapShotDocuments {
+                        let data = doc.data()
+                        if let messageSender = data["sender"] as? String, let messageBody = data["body"] as? String {
+                            let newMessages = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessages)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                         
+                    }
+                }
+            }
+        }
+    }
 
 }
 extension ChatViewController : UITableViewDataSource {
