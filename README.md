@@ -1,6 +1,6 @@
 # Fast Chat
 
-## **FlashChat is a live messaging application for iOS using Swift and Google’s Firebase database service for backend support on securely saving user accounts and their personal chats.**
+## **FastChat is a live messaging application for iOS using Swift and Google’s Firebase database service for backend support on securely saving user accounts and their personal chats.**
 
 ## Features:
 * Using 3rd party libraries with CocoaPods.
